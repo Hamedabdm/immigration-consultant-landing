@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+:root {
+  --cream: #f6f1e8;
+  --navy: #162238;
+  --gold: #c8a46a;
+  --charcoal: #23262b;
+  --slate: #6e7785;
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-navy: var(--navy);
+  --color-gold: var(--gold);
+  --color-charcoal: var(--charcoal);
+  --color-slate: var(--slate);
+  --font-sans: "Vazirmatn", sans-serif;
+  --font-serif: "Playfair Display", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--charcoal);
+  font-family: "Vazirmatn", sans-serif;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--navy);
+}
+@keyframes luxury-float {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(38px, -32px, 0) scale(1.08);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes luxury-float-slow {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-32px, 26px, 0) scale(1.06);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.luxury-float {
+  animation: luxury-float 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.luxury-float-slow {
+  animation: luxury-float-slow 11s ease-in-out infinite;
+  will-change: transform;
+}
